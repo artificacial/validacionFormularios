@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Validación Combinada en Formularios HTML5</title>
+    <style>
+        /* Estilos para campos válidos */
+        input:valid {
+            border: 2px solid green;
+        }
+
+        /* Estilos para campos inválidos */
+        input:invalid {
+            border: 2px solid red;
+        }
+
+        /* Estilos para valores dentro del rango */
+        input:in-range {
+            background-color: #dff0d8;
+        }
+
+        /* Estilos para valores fuera del rango */
+        input:out-of-range {
+            background-color: #f2dede;
+        }
+    </style>
+</head>
+
+<body>
+    <h2>Formulario de Registro</h2>
+    <form>
+        <!-- Campo de texto obligatorio con una longitud mínima de 3 caracteres -->
+        <label for="username">Nombre de usuario:</label>
+        <input type="text" id="username" name="username" required minlength="3"
+            placeholder="Ingrese su nombre de usuario">
+
+        <!-- Campo de email obligatorio -->
+        <label for="email">Email:</label>
+        <input type="email" id="email" name="email" required placeholder="Ingrese su email">
+
+        <!-- Campo numérico para la edad con un rango de 18 a 65 -->
+        <label for="age">Edad:</label>
+        <input type="number" id="age" name="age" min="18" max="65" placeholder="Ingrese su edad">
+
+        <!-- Botón de envío del formulario -->
+        <button type="submit">Registrar</button>
+    </form>
+</body>
+
+</html>
+
+<!--Explicación
+Combina las validaciones de los ejemplos anteriores. y : Aplican estilos a los campos de texto y de email según sean válidos o no. y : Aplican estilos a los campos numéricos según estén dentro o fuera del rango especificado.-->

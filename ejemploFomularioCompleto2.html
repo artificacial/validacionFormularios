@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Otro Formulario de Información Personal</title>
+    <style>
+        /* Estilos para los campos de formulario */
+        .form-group {
+            margin-bottom: 20px;
+        }
+
+        label {
+            display: block;
+            margin-bottom: 5px;
+        }
+
+        input,
+        select,
+        textarea {
+            width: 100%;
+            padding: 10px;
+            border-radius: 5px;
+            border: 1px solid #ccc;
+            box-sizing: border-box;
+            /* Incluye el relleno y el borde en el ancho total */
+        }
+
+        input[type="submit"] {
+            background-color: #4CAF50;
+            color: white;
+            padding: 10px 20px;
+            border: none;
+            cursor: pointer;
+            border-radius: 5px;
+        }
+
+        /* Estilos para campos inválidos */
+        input:invalid,
+        select:invalid,
+        textarea:invalid {
+            border: 2px solid red;
+        }
+    </style>
+</head>
+
+<body>
+
+    <form>
+        <div class="form-group">
+            <!-- Campo para el nombre -->
+            <label for="nombre">Nombre:</label>
+            <input type="text" id="nombre" name="nombre" placeholder="Ingrese su nombre" required>
+        </div>
+
+        <div class="form-group">
+            <!-- Campo para el correo electrónico -->
+            <label for="email">Correo Electrónico:</label>
+            <input type="email" id="email" name="email" placeholder="Ingrese su correo electrónico" required>
+        </div>
+
+        <div class="form-group">
+            <!-- Campo para el número de teléfono -->
+            <label for="telefono">Teléfono:</label>
+            <input type="tel" id="telefono" name="telefono" placeholder="Ingrese su número de teléfono" required
+                pattern="[0-9]{10}">
+        </div>
+
+        <div class="form-group">
+            <!-- Campo para la fecha de nacimiento -->
+            <label for="fecha_nacimiento">Fecha de Nacimiento:</label>
+            <input type="date" id="fecha_nacimiento" name="fecha_nacimiento" required>
+        </div>
+
+        <div class="form-group">
+            <!-- Campo para la selección de género -->
+            <label for="genero">Género:</label>
+            <select id="genero" name="genero" required>
+                <option value="">Seleccione su género</option>
+                <option value="masculino">Masculino</option>
+                <option value="femenino">Femenino</option>
+                <option value="otro">Otro</option>
+            </select>
+        </div>
+
+        <div class="form-group">
+            <!-- Campo para la dirección -->
+            <label for="direccion">Dirección:</label>
+            <textarea id="direccion" name="direccion" placeholder="Ingrese su dirección" required></textarea>
+        </div>
+
+        <!-- Botón de enviar -->
+        <input type="submit" value="Enviar">
+    </form>
+
+</body>
+
+</html>
+
+<!--En este formulario, se han utilizado divs con la clase .form-group para envolver cada campo de formulario, lo que proporciona un diseño más estructurado y ordenado. Las etiquetas <label> siguen siendo utilizadas para proporcionar indicaciones sobre el tipo de datos que se debe introducir en cada campo. Además, se aplican estilos CSS para los campos de entrada, select y textarea, y se resaltan los campos inválidos utilizando la pseudo-clase :invalid.-->

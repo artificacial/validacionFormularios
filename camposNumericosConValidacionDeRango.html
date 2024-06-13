@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Validación de Rango en Formularios HTML5</title>
+    <style>
+        /* Estilos para valores dentro del rango */
+        input:in-range {
+            background-color: #dff0d8;
+        }
+
+        /* Estilos para valores fuera del rango */
+        input:out-of-range {
+            background-color: #f2dede;
+        }
+    </style>
+</head>
+
+<body>
+    <h2>Formulario de Edad</h2>
+    <form>
+        <!-- Campo numérico para la edad con un rango de 18 a 65 -->
+        <label for="age">Edad:</label>
+        <input type="number" id="age" name="age" min="18" max="65" placeholder="Ingrese su edad">
+
+        <!-- Botón de envío del formulario -->
+        <button type="submit">Enviar</button>
+    </form>
+</body>
+
+</html>
+
+<!--Explicación-->
+<!--: Aplica un fondo verde claro cuando el valor numérico está dentro del rango especificado (18 a 65). : Aplica un fondo rojo claro cuando el valor numérico está fuera del rango especificado-->
